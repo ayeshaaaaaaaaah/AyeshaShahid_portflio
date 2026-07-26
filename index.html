@@ -1,98 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayeshah Shahid — Machine Learning Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #F8FAFC;
-      --text: #0F172A;
-      --main: #1E293B;
-      --accent: #2563EB;
-    }
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 24px;
-      box-sizing: border-box;
-    }
-    .card {
-      background: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 32px;
-      max-width: 480px;
-      width: 100%;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-    .monogram {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-      background-color: #0F172A;
-      color: #F8FAFC;
-      font-weight: 700;
-      font-size: 18px;
-      border-radius: 8px;
-      position: relative;
-      margin-bottom: 20px;
-    }
-    .dot {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      width: 6px;
-      height: 6px;
-      background-color: var(--accent);
-      border-radius: 50%;
-    }
-    h1 {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--main);
-      margin: 0 0 8px 0;
-    }
-    p {
-      font-size: 14px;
-      color: #64748B;
-      margin: 0 0 16px 0;
-      line-height: 1.5;
-    }
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--accent);
-      background: #EFF6FF;
-      padding: 6px 12px;
-      border-radius: 999px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayesha Shahid — Portfolio</title>
+<meta name="description" content="I build scalable machine learning pipelines and vector search systems that turn high-dimensional unstructured data into actionable business strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="card">
-    <div class="monogram">
-      AH
-      <span class="dot"></span>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" aria-label="Home" style="display:flex;align-items:center;gap:10px;">
+      <span class="monogram">AH</span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="#work">Work</a>
+      <a href="#design">Design</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
-    <h1>Ayesha Shahid</h1>
-    <p>I build scalable machine learning pipelines and vector search systems that turn high-dimensional unstructured data into actionable business strategy.</p>
-    <div class="status">● System Live & Initialized</div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</nav>
+
+<header class="hero-band" id="top">
+  <span class="hero-blob blob-1"></span>
+  <span class="hero-blob blob-2"></span>
+  <span class="hero-blob blob-3"></span>
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="headshot"><img src="assets/headshot.jpg" alt="Ayesha Shahid"></div>
+      <div>
+        <h1>Ayesha Shahid</h1>
+        <p class="claim">I build scalable machine learning pipelines and vector search systems that turn high-dimensional unstructured data into actionable business strategy.</p>
+      </div>
+    </div>
+    <div class="hero-links">
+      <a href="https://github.com/ayeshaaaaaaaaah/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/ayesha-shahid-8a31b5391/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#work">Explore case studies</a>
+      <a class="btn btn-secondary" href="#contact" data-open-contact>Schedule a call</a>
+    </div>
+    <a class="design-badge" href="#design">Also designs UI/UX in Figma ↓</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section id="work">
+    <div class="section-label reveal">Featured case study</div>
+    <h2 class="reveal">FlyRank AI — Content Performance Clustering</h2>
+    <div class="feature-card reveal">
+      <p>Segmented a 30,000-row content dataset into 6 actionable performance archetypes using a composite numeric + TF-IDF feature matrix and K-Means, validated against HDBSCAN.</p>
+      <div class="beats">
+        <div>
+          <div class="beat-label">Problem</div>
+          <p>FlyRank had 30K rows of content metrics and no clear strategy for what content to prioritize — the ask was just "find insights in the data."</p>
+        </div>
+        <div>
+          <div class="beat-label">What I did</div>
+          <p>Framed it as unsupervised clustering. Engineered a composite feature matrix (engagement ratios + TF-IDF tags), tested K-Means against HDBSCAN with silhouette validation, and deliberately excluded vanity metrics so clusters reflected true retention, not viral spikes.</p>
+        </div>
+        <div>
+          <div class="beat-label">What came of it</div>
+          <p>6 distinct performance archetypes, each documented in plain English so marketing leads could decide what to produce, pause, or iterate on.</p>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="flyrank-case-study.html">Read full technical deep dive →</a>
+      </div>
+    </div>
+
+    <div class="section-label reveal" style="margin-top:44px;">Secondary projects</div>
+    <div class="grid">
+      <div class="project-card reveal">
+        <h3>AromaMatch AI</h3>
+        <p>Content-based fragrance recommender using TF-IDF vectorization and cosine similarity over a multi-feature perfume dataset. Deployed as an interactive Streamlit app.</p>
+        <span class="stat">86.65% match accuracy</span>
+        <a href="https://github.com/ayeshaaaaaaaaah/AI_AromaMatch" target="_blank" rel="noopener">View source →</a>
+      </div>
+      <div class="project-card reveal">
+        <h3>Twitter Sentiment Analysis</h3>
+        <p>Modular pipeline combining regex cleaning, emoji retention, TF-IDF vectorization, and Logistic Regression inside a scikit-learn Pipeline container.</p>
+        <span class="stat">≥80% F1-score</span>
+        <a href="https://github.com/ayeshaaaaaaaaah/" target="_blank" rel="noopener"><!-- REPLACE with the specific repo link once ready -->View source →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="design">
+    <div class="section-label reveal">Also design</div>
+    <h2 class="reveal">UI/UX & Product Design</h2>
+    <div class="design-card reveal">
+      <div class="design-card-grid">
+        <div>
+          <p>Alongside ML work, I design and prototype interfaces — landing pages, mobile app flows, and design systems — in Figma.</p>
+          <div class="design-skills">
+            <span class="design-pill">Landing pages</span>
+            <span class="design-pill">Mobile app design</span>
+            <span class="design-pill">Prototyping</span>
+            <span class="design-pill">Wireframing</span>
+            <span class="design-pill">Design systems</span>
+          </div>
+          <a href="https://www.figma.com/design/99EupCrjN3WwXtozBPXJoY/Fashion?node-id=360-73&t=YTUZrmfdc0lDBoWf-1" target="_blank" rel="noopener">View Figma work →</a>
+        </div>
+        <a href="https://www.figma.com/design/99EupCrjN3WwXtozBPXJoY/Fashion?node-id=360-73&t=YTUZrmfdc0lDBoWf-1" target="_blank" rel="noopener" class="figma-thumb">
+          <img src="https://www.figma.com/file/99EupCrjN3WwXtozBPXJoY/thumbnail?node-id=360-73&in-better-link-exp=true" alt="Figma design preview">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-label reveal">About</div>
+    <h2 class="reveal">Bio</h2>
+    <p class="reveal">BS AI student interning at FlyRank AI, where I build unsupervised machine learning pipelines on real content performance data. Previously built NLP classifiers, TF-IDF recommendation logic, and rule-based systems at DecodeLabs. Outside my internship, I build and deploy end-to-end ML tools — like AromaMatch AI and the Twitter sentiment pipeline — and design interfaces in Figma, sharing code on GitHub and write-ups on LinkedIn.</p>
+    <div class="section-label reveal" style="margin-top:28px;">Technical stack</div>
+    <div class="stack-list reveal">
+      <span class="stack-pill">Python</span>
+      <span class="stack-pill">Scikit-learn</span>
+      <span class="stack-pill">Pandas</span>
+      <span class="stack-pill">Streamlit</span>
+      <span class="stack-pill">C++</span>
+      <span class="stack-pill">Figma</span>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="section-label reveal">Contact</div>
+    <h2 class="reveal">Get in touch</h2>
+    <p class="reveal">If you need an ML engineer who can turn an ambiguous dataset into interpretable models, or a UI/UX designer who can turn a rough idea into a usable interface — let's talk.</p>
+    <a class="footer-email reveal" href="mailto:ayeshaach027@gmail.com">ayeshaach027@gmail.com</a>
+    <div class="cta-row reveal">
+      <a class="btn btn-primary" href="#" data-open-contact>Schedule a call</a>
+    </div>
+    <p class="footer-note">© 2026 Ayesha Shahid. Built with static HTML/CSS — no framework, by choice.</p>
+  </footer>
+
+</div>
+
+<div class="modal-overlay" id="contact-modal">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <h2>Let's talk</h2>
+    <p>Email me directly — I'll get back to you to find a time that works.</p>
+    <div class="modal-email-row">
+      <span>ayeshaach027@gmail.com</span>
+      <button class="copy-btn" data-email="ayeshaach027@gmail.com">Copy</button>
+    </div>
+    <a class="btn btn-primary" href="mailto:ayeshaach027@gmail.com" style="width:100%;text-align:center;box-sizing:border-box;">Open in email app</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
