@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* Global Variables & Reset */
+    /* Global Aesthetic Styles */
     :root {
       --bg: #0b132b;
       --card-bg: #1c2541;
@@ -120,7 +120,7 @@
       margin-bottom: 20px;
     }
 
-    .headshot-avatar {
+    .headshot {
       width: 70px;
       height: 70px;
       background: var(--pill-bg);
@@ -131,6 +131,13 @@
       font-size: 24px;
       font-weight: bold;
       border: 2px solid var(--teal);
+      overflow: hidden;
+    }
+
+    .headshot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .role-line {
@@ -354,7 +361,7 @@
     /* Mobile Responsive */
     @media (max-width: 600px) {
       .nav-links {
-        display: none; /* Can be toggled or simplified for mobile */
+        display: none;
       }
       h1 { font-size: 1.8rem; }
       h2 { font-size: 1.4rem; }
@@ -371,11 +378,11 @@
         <span class="monogram">AS</span>
       </a>
       <div class="nav-links">
-        <a href="#capstone">Capstone</a>
-        <a href="#work">AI Projects</a>
-        <a href="#design">UI/UX</a>
+        <a href="#posts">Posts</a>
+        <a href="#work">Featured Work</a>
+        <a href="#design">UI/UX Design</a>
         <a href="#experience">Experience</a>
-        <a href="#contact" id="nav-contact-btn">Contact</a>
+        <a href="#contact" data-open-contact>Contact</a>
       </div>
     </div>
   </nav>
@@ -384,7 +391,9 @@
   <header class="hero-band" id="home">
     <div class="wrap">
       <div class="hero-top">
-        <div class="headshot-avatar">AS</div>
+        <div class="headshot">
+          <span class="monogram" style="width:100%; height:100%; font-size: 24px; border-radius:50%;">AS</span>
+        </div>
         <div>
           <div class="role-line">UI/UX Designer & AI/ML Engineer</div>
           <h1>Ayesha Shahid</h1>
@@ -396,61 +405,58 @@
       </p>
 
       <div class="cta-row">
-        <a href="#capstone" class="btn btn-primary">View Capstone Post ↓</a>
+        <a href="#posts" class="btn btn-primary">View Posts ↓</a>
         <a href="mailto:ayesha.shahid.dev@gmail.com" class="btn btn-secondary">✉️ Direct Email</a>
-        <button class="btn btn-secondary trigger-contact">Get in Touch</button>
+        <button class="btn btn-secondary" data-open-contact>Get in Touch</button>
       </div>
     </div>
   </header>
 
-  <!-- Capstone & Posts Section -->
-  <section id="capstone">
+  <!-- Posts Section (With Added Capstone Feature) -->
+  <section id="posts">
     <div class="wrap">
-      <div class="section-label">Featured Research & Posts</div>
-      <h2>FlyRank ML Internship Capstone</h2>
+      <div class="section-label">Posts & Case Studies</div>
+      <h2>Recent Posts</h2>
 
       <article class="feature-card">
-        <h3>Structured Content Archetype Clustering</h3>
+        <h3>Structured Content Archetype Clustering: Finding Actionable Page Groups in Search Performance Data</h3>
         <p class="meta" style="font-size: 13px; color: var(--muted); margin-bottom: 12px;">
-          Published August 2026 • FlyRank ML Internship Capstone
+          Ayesha Shahid • FlyRank ML Internship Capstone • August 2026
         </p>
         
-        <!-- Screenshot Preview -->
         <div class="project-image">
           <a href="https://ayeshaaaaaaaaah.github.io/my-flyrank-ml1-internship/" target="_blank" rel="noopener">
-            <img src="capstone-preview.png" alt="Structured Content Archetype Clustering Abstract Preview" onerror="this.src='https://via.placeholder.com/800x400/1c2541/64dfdf?text=FlyRank+Capstone+Abstract+Preview';" />
+            <img src="capstone-preview.png" alt="Structured Content Archetype Clustering" onerror="this.src='https://via.placeholder.com/800x400/1c2541/64dfdf?text=FlyRank+Capstone+Preview';" />
           </a>
         </div>
 
-        <p><strong>Abstract:</strong> Finding actionable page groups in search performance data using K-Means clustering (k=5) across FlyRank warehouse data. Evaluated CTR, average position, engagement rate, monthly impressions, and word count to isolate 5 distinct performance archetypes with a silhouette score of 0.430.</p>
+        <p><strong>Abstract:</strong> This project asks which natural performance archetypes exist across a client content inventory, using one month (March 2026) of FlyRank warehouse data. Pages were clustered on five features — CTR, average position, engagement rate, monthly impressions, and word count — using K-Means (k=5), achieving a silhouette score of 0.430.</p>
         
         <div class="stack-list">
           <span class="stack-pill">K-Means Clustering</span>
           <span class="stack-pill">Unsupervised ML</span>
           <span class="stack-pill">Python</span>
           <span class="stack-pill">Feature Engineering</span>
-          <span class="stack-pill">Search Data Analysis</span>
         </div>
 
         <div class="cta-row" style="margin-top: 16px;">
           <a href="https://ayeshaaaaaaaaah.github.io/my-flyrank-ml1-internship/" target="_blank" rel="noopener" class="btn btn-primary">
-            Read Full Capstone Post ↗
+            Read Capstone Post ↗
           </a>
           <a href="https://github.com/ayeshaaaaaaaaah/my-flyrank-ml1-internship" target="_blank" rel="noopener" class="btn btn-secondary">
-            View GitHub Repo
+            View Repository
           </a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- Featured AI / ML Projects Section -->
+  <!-- Featured Work Section -->
   <section id="work">
     <div class="wrap">
       <div class="section-label">Machine Learning & Web Systems</div>
       <h2>Featured AI Projects</h2>
 
-      <!-- AromaMatch AI -->
       <article class="feature-card">
         <h3>AromaMatch AI — Perfume Recommendation System</h3>
         <p>An intelligent recommender system using TF-IDF vectorization and cosine similarity to match users with personalized fragrance profiles based on scent notes and preferences.</p>
@@ -461,12 +467,8 @@
           <span class="stack-pill">TF-IDF</span>
           <span class="stack-pill">Cosine Similarity</span>
         </div>
-        <div>
-          <span class="stat">⚡ Top-5 Scent Recommendations in &lt;200ms</span>
-        </div>
       </article>
 
-      <!-- Additional Projects Grid -->
       <div class="grid">
         <article class="project-card">
           <h3>BiteBase Web Application</h3>
@@ -477,7 +479,6 @@
             <span class="stack-pill">XAMPP</span>
             <span class="stack-pill">UI/UX</span>
           </div>
-          <span class="stat">Relational DB Backend</span>
         </article>
 
         <article class="project-card">
@@ -488,7 +489,6 @@
             <span class="stack-pill">OOP</span>
             <span class="stack-pill">Data Structures</span>
           </div>
-          <span class="stat">Medical Algorithmic System</span>
         </article>
       </div>
     </div>
@@ -513,7 +513,7 @@
     </div>
   </section>
 
-  <!-- Experience / Internships Section -->
+  <!-- Experience Section -->
   <section id="experience">
     <div class="wrap">
       <div class="section-label">Professional Experience</div>
@@ -554,15 +554,15 @@
       </a>
       <div class="footer-links">
         <a href="https://github.com/ayeshaaaaaaaaah" target="_blank" rel="noopener">GitHub Profile</a>
-        <a href="#" class="trigger-contact">Quick Contact Card</a>
+        <a href="#" data-open-contact>Quick Contact Card</a>
       </div>
       <div class="footer-note">
-        © 2026 Ayesha Shahid. Built with semantic HTML & modern CSS.
+        © 2026 Ayesha Shahid. Built with semantic HTML, CSS & JavaScript.
       </div>
     </div>
   </footer>
 
-  <!-- Contact Modal Popup -->
+  <!-- Contact Modal Overlay -->
   <div class="modal-overlay" id="contact-modal">
     <div class="modal-box">
       <button class="modal-close" id="close-modal">&times;</button>
@@ -576,12 +576,11 @@
     </div>
   </div>
 
-  <!-- Interactive Modal Script -->
   <script>
     const modal = document.getElementById('contact-modal');
     const closeBtn = document.getElementById('close-modal');
     const copyBtn = document.getElementById('copy-btn');
-    const triggers = document.querySelectorAll('.trigger-contact, #nav-contact-btn');
+    const triggers = document.querySelectorAll('[data-open-contact]');
 
     triggers.forEach(btn => {
       btn.addEventListener('click', (e) => {
